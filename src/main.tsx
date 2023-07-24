@@ -1,31 +1,20 @@
-// import React from 'react'
-// import ReactDOM from 'react-dom/client'
-// import App from './App.tsx'
-// import './index.css'
-
-// ReactDOM.createRoot(document.getElementById('root')!).render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-// )
-
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { ThemeProvider } from './context/ThemeContext';
-// import { ApiProvider } from './context/ContextApi';
-import { BrowserRouter as Routes } from 'react-router-dom'
+import { ApiProvider } from './context/ContextApi';
+import { BrowserRouter as Router } from 'react-router-dom'; // Use 'Router' instead of 'Routes'
 import App from './App';
-
 
 ReactDOM.render(
   <React.StrictMode>
-    <Routes>
+    <Router> {/* Use 'Router' here instead of 'Routes' */}
       <ThemeProvider>
+        <ApiProvider>
           <App />
+        </ApiProvider>
       </ThemeProvider>
-    </Routes>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
