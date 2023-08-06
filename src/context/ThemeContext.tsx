@@ -34,7 +34,7 @@ const reducer = (state: State, action: Actions): State => {
       case themeActions.setTheme:
         return { ...state, theme: action.payload };
       default:
-        return state; // Always provide a default case to handle unhandled actions
+        return state; 
     }
   };
 
