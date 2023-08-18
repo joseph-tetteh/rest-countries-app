@@ -35,3 +35,4 @@ export const ApiProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 };
 
 export const useApi = () => useContext(ApiContext);
+// export default ApiContext;
